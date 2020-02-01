@@ -1,7 +1,7 @@
 
 ASSN = 2J
 CLASS= cs143
-CLASSDIR= /usr/class/cs143/cool
+CLASSDIR= /workspace/cs143/cool
 LIB= -lfl
 
 SRC= cool.lex test.cl README
@@ -72,7 +72,7 @@ ${LSRC} :
 	${CLASSDIR}/etc/link-shared ${ASSN} ${LSRC}
 
 ${TSRC} ${CSRC}:
-	-ln -s ${CLASSDIR}/src/PA${ASSN}/$@ $@
+	-cp -r -L ${CLASSDIR}/src/PA${ASSN}/$@ $@
 
 clean :
 	-rm -f *.s ${OUTPUT} ${CLS} *~ lexer parser cgen semant

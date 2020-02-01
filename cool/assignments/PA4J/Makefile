@@ -1,7 +1,7 @@
 
 ASSN = 4J
 CLASS= cs143
-CLASSDIR= /usr/class/cs143/cool
+CLASSDIR= /workspace/cs143/cool
 
 SRC= ClassTable.java TreeConstants.java cool-tree.java good.cl bad.cl README
 CSRC = \
@@ -84,10 +84,10 @@ ${LSRC} :
 	-${CLASSDIR}/etc/link-shared ${ASSN} ${LSRC}
 
 ${TSRC} ${CSRC}:
-	-ln -s ${CLASSDIR}/src/PA${ASSN}/$@ $@
+	-cp -r -L ${CLASSDIR}/src/PA${ASSN}/$@ $@
 
 ${HSRC}:
-	-ln -s ${CLASSDIR}/include/PA${ASSN}/$@ $@
+	-cp -r -L ${CLASSDIR}/include/PA${ASSN}/$@ $@
 
 submit-clean: ${OUTPUT}
 	-rm -f *.s *.class core ${CLS} *~ ${CGEN} parser cgen semant lexer symtab-example

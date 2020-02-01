@@ -1,7 +1,7 @@
 
 ASSN = 3
 CLASS= cs143
-CLASSDIR= /usr/class/cs143/cool
+CLASSDIR= /workspace/cs143/cool
 LIB= -lfl
 AR= gar
 ARCHIVE_NEW= -cr
@@ -69,10 +69,10 @@ ${LSRC} :
 	-${CLASSDIR}/etc/link-shared ${ASSN} ${LSRC}
 
 ${TSRC} ${CSRC}:
-	-ln -s ${CLASSDIR}/src/PA${ASSN}/$@ $@
+	-cp -r -L ${CLASSDIR}/src/PA${ASSN}/$@ $@
 
 ${HSRC}:
-	-ln -s ${CLASSDIR}/include/PA${ASSN}/$@ $@
+	-cp -r -L ${CLASSDIR}/include/PA${ASSN}/$@ $@
 
 submit-clean: ${OUTPUT}
 	-rm -f *.s core ${OBJS} ${CGEN} ${HGEN} lexer *~ parser cgen semant

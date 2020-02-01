@@ -1,7 +1,7 @@
 
 ASSN = 5J
 CLASS= cs143
-CLASSDIR= /usr/class/cs143/cool
+CLASSDIR= /workspace/cs143/cool
 
 SRC= CgenClassTable.java CgenNode.java CgenSupport.java TreeConstants.java cool-tree.java IntSymbol.java StringSymbol.java BoolConst.java example.cl README
 CSRC = \
@@ -79,10 +79,10 @@ ${LSRC} :
 	-${CLASSDIR}/etc/link-shared ${ASSN} ${LSRC}
 
 ${TSRC} ${CSRC}:
-	-ln -s ${CLASSDIR}/src/PA${ASSN}/$@ $@
+	-cp -r -L ${CLASSDIR}/src/PA${ASSN}/$@ $@
 
 ${HSRC}:
-	-ln -s ${CLASSDIR}/include/PA${ASSN}/$@ $@
+	-cp -r -L ${CLASSDIR}/include/PA${ASSN}/$@ $@
 
 submit-clean: ${OUTPUT}
 	-rm -f *.s core ${CLS} *~ ${CGEN} parser cgen semant lexer symtab-example
