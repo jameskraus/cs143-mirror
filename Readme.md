@@ -12,3 +12,7 @@ make -f /usr/class/cs143/assignments/PA2J/Makefile
 ```
 
 And they will work.
+
+## Where should I work?
+
+I recommend creating a directory called `exercises` in the main workspace directory. It's automatically excluded from this git repo, so you can track your changes separately.
