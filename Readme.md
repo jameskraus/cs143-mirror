@@ -1,6 +1,6 @@
-# Mirror for Stanford CS143 Directory
+# Dockerized Stanford CS143
 
-This is a mirror of the starter directory for CS143 from Stanford.
+This is a docker container with the starter directory for CS143 from Stanford.
 
 ## How do I use this?
 
