@@ -1,0 +1,11 @@
+version: '3.2'
+
+services:
+    server:
+        build:
+            context: ./docker
+        volumes:
+            - ${PWD}:/workspace:cached
+            - ${PWD}/cs143:/usr/class/cs143:cached
+        entrypoint: /bin/bash
+        working_dir: /workspace
