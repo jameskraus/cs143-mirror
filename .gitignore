@@ -1,3 +1,6 @@
+# Grading Files
+cool/assignments/*/grading/**
+
 # Assignment 2
 cool/assignments/PA2J/AbstractSymbol.class
 cool/assignments/PA2J/AbstractSymbol.java
